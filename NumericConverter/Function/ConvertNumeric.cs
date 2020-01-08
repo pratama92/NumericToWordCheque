@@ -29,7 +29,7 @@ namespace NumericConverter.Function
         }
         private static string NumericConvertToWords(string number)
         {
-            if (number == "0") // check zero value
+            if (number == "0" || number =="00") // check zero value
             {
                 return "Zero";
             }
@@ -51,7 +51,7 @@ namespace NumericConverter.Function
             if (x != 0)
                 words += Satuan(x) + " Hundred ";
 
-            if (number.ToString().Length == 3)
+            if (number.ToString().Length == 3 && sisa != 0)
             {
                 words += "and ";
             }
